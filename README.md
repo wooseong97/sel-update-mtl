@@ -2,9 +2,9 @@
 
 **Official PyTorch implementation of [*Selective Task Group Updates for Multi-Task Optimization*](https://arxiv.org/abs/2502.11986) [ICLR 2025].**
 
-![Selective Task Group Visualization](assets/figures/overview.png)
+Wooseong Jeong (KAIST, stk14570@kaist.ac.kr), Kuk-Jin Yoon (KAIST, kjyoon@kaist.ac.kr)
 
-Wooseong Jeong, Kuk-Jin Yoon  
+![Selective Task Group Visualization](figures/overview.png) 
 
 Multi-task learning enables the acquisition of task-generic knowledge by training
 multiple tasks within a unified architecture. However, training all tasks together
@@ -28,9 +28,16 @@ are scalable to different architectures and various numbers of tasks.
 
 
 
+## 📈 Citation
+
+If you use this work in your research, please cite it as:
+
+```bibtex
 @article{jeong2025selective,
-  title={Selective Task Group Updates for Multi-Task Optimization},
-  author={Jeong, Wooseong and Yoon, Kuk-Jin},
-  journal={arXiv preprint arXiv:2502.11986},
-  year={2025}
+  title   = {Selective Task Group Updates for Multi-Task Optimization},
+  author  = {Jeong, Wooseong and Yoon, Kuk-Jin},
+  journal = {arXiv preprint arXiv:2502.11986},
+  year    = {2025}
 }
+
+
