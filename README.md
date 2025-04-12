@@ -1,4 +1,4 @@
-# Selective Task Group Updates for Multi-Task Optimization
+# Selective Task Group Updates for Multi-Task Optimization [ICLR 2025]
 
 **Official PyTorch implementation of our ICLR 2025 paper**:
 
