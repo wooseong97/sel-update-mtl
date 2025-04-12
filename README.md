@@ -1,6 +1,6 @@
 # Selective Task Group Updates for Multi-Task Optimization [ICLR 2025]
 
-**Official PyTorch implementation of 📄 *Selective Task Group Updates for Multi-Task Optimization* [ICLR2025].
+**Official PyTorch implementation of 📄 [*Selective Task Group Updates for Multi-Task Optimization*](https://arxiv.org/abs/2502.11986) [ICLR2025].
 
   
 👨‍💻 Woo-seong Jeong  
