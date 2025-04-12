@@ -1,8 +1,8 @@
 # Selective Task Group Updates for Multi-Task Optimization [ICLR 2025]
 
-**Official PyTorch implementation of our ICLR 2025 paper**:
+**Official PyTorch implementation of 📄 *Selective Task Group Updates for Multi-Task Optimization* [ICLR2025].
 
-📄 *Selective Task Group Updates for Multi-Task Optimization*  
+  
 👨‍💻 Woo-seong Jeong  
 📅 Accepted at **International Conference on Learning Representations (ICLR) 2025**
 
