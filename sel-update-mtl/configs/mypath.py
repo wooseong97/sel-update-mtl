@@ -1,7 +1,7 @@
 import os
 
-db_root = '../invpt_data/'
-db_root_taskonomy = '/home/user/wooseong2/datasets/taskonomy/data'
+db_root = ''
+db_root_taskonomy = ''
 PROJECT_ROOT_DIR = os.path.dirname(os.path.abspath(__file__)).split('/')[0]
 
 db_names = {'PASCALContext': 'PASCALContext', 'NYUD_MT': 'NYUDv2'}
