@@ -93,6 +93,32 @@ CUDA_VISIBLE_DEVICES=$device_num python -m torch.distributed.launch \
 All training configurations, including dataset paths, tasks, and optimization settings, are specified in the corresponding .yml configuration files.
 
 
+## Related Works
+Baseline multi-task optimization methods in this paper.
+
+🔹 MGDA (Multiple Gradient Descent Algorithm) [Sener & Koltun, 2018](https://arxiv.org/abs/1810.04650)
+
+🔹 UW (Uncertainty Weighting) [Kendall et al., 2018](https://arxiv.org/abs/1705.07115)
+
+🔹 DTP (Dynamic Task Prioritization) [Guo et al., 2018](https://openaccess.thecvf.com/content_ECCV_2018/html/Michelle_Guo_Focus_on_the_ECCV_2018_paper.html)
+
+🔹 DWA (Dynamic Weight Averaging) [Liu et al., 2019](https://openaccess.thecvf.com/content_CVPR_2019/html/Liu_End-To-End_Multi-Task_Learning_With_Attention_CVPR_2019_paper.html)
+
+🔹 GradDrop [Chen et al., 2020](https://arxiv.org/abs/2010.06808)
+
+🔹 PCGrad (Projected Conflicting Gradient) [Yu et al., 2020](https://arxiv.org/abs/2001.06782)
+
+🔹 CAGrad (Conflict-Averse Gradient) [Liu et al., 2021a](https://arxiv.org/abs/2110.14048)
+
+🔹 IMTL (Impartial Multi-Task Learning) [Liu et al., 2021b](https://openreview.net/forum?id=IMPnRXEWpvr)
+
+🔹 Aligned-MTL [Senushkin et al., 2023](https://openaccess.thecvf.com/content/CVPR2023/html/Senushkin_Independent_Component_Alignment_for_Multi-Task_Learning_CVPR_2023_paper.html)
+
+🔹 Nash-MTL [Navon et al., 2022](https://arxiv.org/abs/2202.01017)
+
+🔹 FAMO (Fast Adaptive Multi-task Optimization) [Liu et al., 2024](https://arxiv.org/abs/2306.03792)
+
+
 ## Acknowledgements
 This repository incorporates experimental settings and codes from the following prior works:
 
