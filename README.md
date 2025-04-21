@@ -41,34 +41,31 @@ tar xfvz NYUDv2.tar.gz
 tar xfvz PASCALContext.tar.gz
 ```
 
-## 2. Build environment
+## 2. Dataset Path Configuration
+To train or evaluate models, you must set the dataset locations in the path configuration file.
+
+This file contains hardcoded paths to each dataset. 
+Only modify the two variables below:
+
+```python
+# === MODIFY ONLY THESE VARIABLES ===
+db_root = '/path/to/NYUD_or_PASCAL'          # e.g., '/home/user/datasets/NYUDv2'
+db_root_taskonomy = '/path/to/Taskonomy'     # e.g., '/home/user/datasets/Taskonomy'
+# ====================================
+```
+
+## 3. Build environment
+```bash
 conda env create -f environment.yml
 conda activate sel-mtl
-
-## 3. Train and Evaluate
-
+```
 
 
-### Experimental Results on the Taskonomy Dataset using ViT-L
-The best results in each column are shown in **bold**, while convergence failures are indicated with a dash.
-
-| Task          | DE       | DZ       | EO         | ET         | K2         | K3   | N       | C       | R       | S2      | S2.5    | Δₘ (↑)             |
-|---------------|----------|----------|------------|------------|------------|------|---------|---------|---------|---------|---------|--------------------|
-| **Metric**    | L1 ↓     | L1 ↓     | L1 ↓       | L1 ↓       | L1 ↓       | L1 ↓ | L1 ↓    | RMSE ↓  | L1 ↓    | L1 ↓    | L1 ↓    |                    |
-| Single Task   | 0.0155   | 0.0160   | 0.1012     | 0.1713     | 0.1620     | 0.082| 0.2169  | 0.7103  | 0.1357  | 0.1700  | 0.1435  | -                  |
-| GD            | 0.0163   | 0.0167   | 0.1211     | 0.1742     | 0.1715     | 0.093| 0.2333  | 0.7527  | 0.1625  | 0.1837  | 0.1487  | -8.65 ± 0.229       |
-| GradDrop      | 0.0168   | 0.0172   | 0.1229     | 0.1744     | 0.1727     | 0.091| 0.2562  | 0.7615  | 0.1656  | 0.1862  | 0.1511  | -10.81 ± 0.377      |
-| MGDA          | -        | -        | -          | -          | -          | -    | -       | -       | -       | -       | -       | -                  |
-| UW            | 0.0167   | 0.0151   | 0.1212     | 0.1728     | 0.1712     | 0.089| 0.2360  | 0.7471  | 0.1607  | 0.1829  | 0.1538  | -7.65 ± 0.087       |
-| DTP           | 0.0169   | 0.0153   | 0.1213     | **0.1720** | 0.1707     | 0.089| 0.2517  | 0.7481  | 0.1603  | 0.1814  | 0.1503  | -8.16 ± 0.081       |
-| DWA           | 0.0147   | 0.0155   | 0.1209     | 0.1725     | 0.1711     | 0.089| 0.2619  | 0.7486  | 0.1613  | 0.1845  | 0.1543  | -7.92 ± 0.077       |
-| PCGrad        | 0.0161   | 0.0165   | 0.1206     | 0.1735     | 0.1696     | 0.090| 0.2301  | 0.7540  | 0.1625  | 0.1830  | 0.1483  | -7.72 ± 0.206       |
-| CAGrad        | 0.0162   | 0.0166   | 0.1202     | 0.1769     | 0.1651     | 0.091| 0.2565  | 0.7653  | 0.1661  | 0.1861  | 0.1571  | -10.05 ± 0.346      |
-| IMTL          | 0.0162   | 0.0165   | 0.1206     | 0.1741     | 0.1710     | 0.090| 0.2268  | 0.7497  | 0.1617  | 0.1832  | 0.1543  | -8.03 ± 0.179       |
-| Aligned-MTL   | 0.0150   | 0.0155   | **0.1135** | 0.1725     | **0.1630** |**0.086**|0.2513| 0.8039  | 0.1646  | 0.1800  | **0.1438**| -6.22 ± 0.285       |
-| Nash-MTL      | -        | -        | -          | -          | -          | -    | -       | -       | -       | -       | -       | -                  |
-| FAMO          | 0.0157   | 0.0155   | 0.1211     | 0.1730     | 0.1702     | 0.090| 0.2433  | 0.7479  | 0.1610  | 0.1823  | 0.1527  | -7.58 ± 0.211       |
-| **Ours**      | **0.0140** | **0.0145** | 0.1136 | 0.1735     | 0.1679     | 0.087| **0.2029**|**0.7166**|**0.1500**|**0.1769**|0.1469  | **-1.42 ± 0.208**   |
+## 4. Train and Evaluate
+```bash
+cd sel-update-mtl
+bash run.sh
+```
 
 
 ## Acknowledgements
