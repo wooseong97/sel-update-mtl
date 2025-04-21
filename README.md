@@ -62,10 +62,35 @@ conda activate sel-mtl
 
 
 ## 4. Train and Evaluate
+Training is performed using the `run.sh` script, which supports both baseline and the **proposed Selective Update method** through PyTorch distributed training.
+
+
+### 🔧 Run the Script
+Navigate to the root directory and execute:
+
 ```bash
 cd sel-update-mtl
 bash run.sh
 ```
+
+
+- Baseline (Simple GD)
+
+```bash
+CUDA_VISIBLE_DEVICES=$device_num python -m torch.distributed.launch \
+  --nproc_per_node=1 --master_port $port_num \
+  main.py --config_exp './configs/baseline/nyud.yml' --run_mode train
+```
+
+- Proposed Method (Selective Update)
+  
+```bash
+CUDA_VISIBLE_DEVICES=$device_num python -m torch.distributed.launch \
+  --nproc_per_node=1 --master_port $port_num \
+  main.py --config_exp './configs/sel/nyud.yml' --run_mode train
+```
+
+All training configurations, including dataset paths, tasks, and optimization settings, are specified in the corresponding .yml configuration files.
 
 
 ## Acknowledgements
