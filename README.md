@@ -42,11 +42,10 @@ tar xfvz PASCALContext.tar.gz
 ```
 
 ## 2. Build environment
+conda env create -f environment.yml
+conda activate sel-mtl
 
 ## 3. Train and Evaluate
-
-
-## Installation
 
 
 
