@@ -27,19 +27,29 @@ are scalable to different architectures and various numbers of tasks.
 
 
 ## 1. Dataset
-We use the same datasets as [InvPT](https://github.com/prismformore/Multi-Task-Transformer/tree/main/InvPT): **NYUD-v2** and **PASCAL-Context**.
+
+We use three datasets: **NYUD-v2**, **PASCAL-Context**, and **Taskonomy**.
+
+For **NYUD-v2** and **PASCAL-Context**, we follow the same dataset settings as [InvPT](https://github.com/prismformore/Multi-Task-Transformer/tree/main/InvPT).
 
 You can download them from the following links:
 
 - [NYUDv2.tar.gz](https://hkustconnect-my.sharepoint.com/:u:/g/personal/hyeae_connect_ust_hk/EZ-2tWIDYSFKk7SCcHRimskBhgecungms4WFa_L-255GrQ?e=6jAt4c)  
 - [PASCALContext.tar.gz](https://hkustconnect-my.sharepoint.com/:u:/g/personal/hyeae_connect_ust_hk/ER57KyZdEdxPtgMCai7ioV0BXCmAhYzwFftCwkTiMmuM7w?e=2Ex4ab)
 
-After downloading, extract the datasets using:
+After downloading, extract the files using:
 
 ```bash
 tar xfvz NYUDv2.tar.gz
 tar xfvz PASCALContext.tar.gz
 ```
+
+For the **Taskonomy** dataset, you can find instructions and download links at the official repository:
+
+- [Taskonomy Dataset](https://github.com/StanfordVL/taskonomy)
+
+Please follow the guidelines provided there for downloading and setting up the dataset.
+
 
 ## 2. Dataset Path Configuration
 To train or evaluate models, you must set the dataset locations in the path configuration file.
